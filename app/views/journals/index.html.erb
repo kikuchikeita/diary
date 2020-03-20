@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>5W1H日記</h1>
+<h1></h1>
 
 <table>
   <thead>
@@ -21,9 +21,9 @@
     <% @journals.each do |journal| %>
       <tr>
         <td><%= journal.title %></td>
-        <td><%= link_to '内容を見る', journal %></td>
-        <td><%= link_to '編集する', edit_journal_path(journal) %></td>
-        <td><%= link_to '削除する', journal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '内容を見る', journal, class: "border-h" %></td>
+        <td><%= link_to '編集する', edit_journal_path(journal), class: "border-h" %></td>
+        <td><%= link_to '削除する', journal, method: :delete, data: { confirm: '本当に削除してよろしいですか?' }, class: "border-h" %></td>
       </tr>
     <% end %>
   </tbody>
