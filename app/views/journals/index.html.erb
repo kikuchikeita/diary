@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>5W1H日記</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>When</th>
+      <th>Where</th>
+      <th>Who</th>
+      <th>What</th>
+      <th>Why</th>
+      <th>How</th>
+      <th>本文</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journals.each do |journal| %>
+      <tr>
+        <td><%= journal.title %></td>
+        <td><%= journal.when %></td>
+        <td><%= journal.where %></td>
+        <td><%= journal.who %></td>
+        <td><%= journal.what %></td>
+        <td><%= journal.why %></td>
+        <td><%= journal.how %></td>
+        <td><%= journal.body %></td>
+        <td><%= link_to '内容を見る', journal %></td>
+        <td><%= link_to '編集する', edit_journal_path(journal) %></td>
+        <td><%= link_to '削除する', journal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '日記を書く', new_journal_path %>

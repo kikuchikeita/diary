@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @journal.title %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @journal.when %>
+</p>
+
+<p>
+  <strong>Where:</strong>
+  <%= @journal.where %>
+</p>
+
+<p>
+  <strong>Who:</strong>
+  <%= @journal.who %>
+</p>
+
+<p>
+  <strong>What:</strong>
+  <%= @journal.what %>
+</p>
+
+<p>
+  <strong>Why:</strong>
+  <%= @journal.why %>
+</p>
+
+<p>
+  <strong>How:</strong>
+  <%= @journal.how %>
+</p>
+
+<p>
+  <strong>本文:</strong>
+  <%= @journal.body %>
+</p>
+
+<%= link_to '編集する', edit_journal_path(@journal) %> |
+<%= link_to '戻る', journals_path %>

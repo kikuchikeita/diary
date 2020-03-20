@@ -1,0 +1,57 @@
+<%= form_with(model: journal, local: true) do |form| %>
+  <% if journal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(journal.errors.count, "error") %> prohibited this journal from being saved:</h2>
+
+      <ul>
+        <% journal.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :タイトル %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :when %>
+    <%= form.date_select :when %>
+  </div>
+
+  <div class="field">
+    <%= form.label :where %>
+    <%= form.text_field :where %>
+  </div>
+
+  <div class="field">
+    <%= form.label :who %>
+    <%= form.text_field :who %>
+  </div>
+
+  <div class="field">
+    <%= form.label :what %>
+    <%= form.text_field :what %>
+  </div>
+
+  <div class="field">
+    <%= form.label :why %>
+    <%= form.text_field :why %>
+  </div>
+
+  <div class="field">
+    <%= form.label :how %>
+    <%= form.text_field :how %>
+  </div>
+
+  <div class="field">
+    <%= form.label :本文 %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '新しい日記を作る' %>
+  </div>
+<% end %>
