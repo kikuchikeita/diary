@@ -9,7 +9,7 @@ class CreateJournals < ActiveRecord::Migration[6.0]
       t.string :why
       t.string :how
       t.text :body
-
+      t.datetime :start_time
       t.timestamps
     end
   end

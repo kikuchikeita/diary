@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_071716) do
     t.string "why"
     t.string "how"
     t.text "body"
+    t.datetime "start_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

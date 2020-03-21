@@ -70,6 +70,6 @@ class JournalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def journal_params
-      params.require(:journal).permit(:title, :when, :where, :who, :what, :why, :how, :body)
+      params.require(:journal).permit(:title, :start_time, :when, :where, :who, :what, :why, :how, :body)
     end
 end

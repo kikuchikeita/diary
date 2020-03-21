@@ -1,4 +1,4 @@
-<div class="bgimg">
+
 <p id="notice"><%= notice %></p>
 <h1></h1>
 
@@ -31,6 +31,17 @@
 
 <br>
 <p class=new>
-<%= link_to '日記を書く', new_journal_path %>
+  <%= link_to '日記を書く', new_journal_path %>
 </p>
-</div>
+
+<p class="calender">
+<%= month_calendar events: @journals do |date, journals| %>
+  <%= date.day %>
+
+  <% journals.each do |journal| %>
+    <div>
+      <%= link_to journal.title, journal %>
+    </div>
+  <% end %>
+<% end %>
+</p>
