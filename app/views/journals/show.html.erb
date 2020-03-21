@@ -1,7 +1,7 @@
 <div class="col-11 mx-auto">
 <p id="notice"><%= notice %></p>
-<div class="5w1h">
-<p>
+
+<p class="showtitle">
   <strong>タイトル:</strong>
   <%= @journal.title %>
 </p>
@@ -40,7 +40,7 @@
   <strong>本文:</strong>
   <%= @journal.body %>
 </p>
-</div>
+
 
 <%= link_to '編集する', edit_journal_path(@journal) %> |
 <%= link_to '戻る', journals_path %>|

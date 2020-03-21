@@ -5,7 +5,7 @@ class JournalsController < ApplicationController
   # GET /journals
   # GET /journals.json
   def index
-    @journals = Journal.all
+    @journals = Journal.where(user_id: current_user.id)
   end
 
   # GET /journals/1
@@ -25,7 +25,7 @@ class JournalsController < ApplicationController
   # POST /journals
   # POST /journals.json
   def create
-    @journal = Journal.new(journal_params)
+    @journal = current_user.journals.new(journal_params)
 
     respond_to do |format|
       if @journal.save

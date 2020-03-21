@@ -18,7 +18,7 @@
     </thead>
 
     <tbody>
-      <% @journals.each do |journal| %>
+      <% @journals.last(3).each do |journal| %>
         <tr>
           <td><%= journal.title %></td>
           <td><%= link_to '内容を見る', journal, class: "border-h" %></td>
@@ -30,7 +30,7 @@
   </table>
 
   <br>
-  <p class=new>
+  <p class="new">
     <%= link_to '日記を書く', new_journal_path %>
   </p>
 

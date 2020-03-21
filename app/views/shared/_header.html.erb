@@ -12,15 +12,10 @@
     
     
     <li class="nav-item">
-      <% if user_signed_in? %>
-        <%= link_to user_path(current_user), class: "nav-item" do %>
+     
+        <%= link_to destroy_user_session_path, method: :delete, class: "nav-item" do %>
           <i>ログアウト</i>
         <% end %>
-      <% else %>
-        <%= link_to new_user_session_path, class: "nav-link" do %>          
-          <i>ログアウト</i>
-        <% end %>
-      <% end %>
     </li>
   </ul>
 
