@@ -1,3 +1,4 @@
+<div class="col-11 mx-auto">
 <p id="notice"><%= notice %></p>
 <div class="5w1h">
 <p>
@@ -35,11 +36,13 @@
   <%= @journal.how %>
 </p>
 
-<p>
+<p class="body">
   <strong>本文:</strong>
   <%= @journal.body %>
 </p>
 </div>
 
 <%= link_to '編集する', edit_journal_path(@journal) %> |
-<%= link_to '戻る', journals_path %>
+<%= link_to '戻る', journals_path %>|
+<%= link_to '削除する', @journal, method: :delete, data: { confirm: '本当に削除してよろしいですか?' } %>
+</div>
