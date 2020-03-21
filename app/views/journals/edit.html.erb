@@ -1,6 +1,8 @@
-<h1>Editing Journal</h1>
+<h1>日記の修正</h1>
 
 <%= render 'form', journal: @journal %>
 
+<p class="edit">
 <%= link_to '詳細画面へ', @journal %> |
 <%= link_to '一覧に戻る', journals_path %>
+</p>
