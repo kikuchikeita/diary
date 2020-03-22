@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  when: 2020-03-20
+  where: MyString
+  who: MyString
+  what: MyString
+  why: MyString
+  how: MyString
+  body: MyText
+
+two:
+  title: MyString
+  when: 2020-03-20
+  where: MyString
+  who: MyString
+  what: MyString
+  why: MyString
+  how: MyString
+  body: MyText

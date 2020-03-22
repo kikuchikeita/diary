@@ -1,0 +1,48 @@
+// Place all the styles related to the journals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.border-h {
+  color: black;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.new {
+  color: brown;
+  background-color: rgb(200, 219, 250);
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 90px;
+}
+
+.showtitle {
+  padding-top: 20px;
+}
+
+.field {
+  padding-top: 3px;
+}
+
+.body {
+  border: 3px solid black;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.logo {
+  font-family: "impact";
+  font-size: 30px;
+}
+
+body {
+  background-image: url(diary3.jpeg);
+  background-size: 100%;
+}
+
+h2 {
+  padding-top: 40px;
+}

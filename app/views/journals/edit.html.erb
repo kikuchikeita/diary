@@ -1,0 +1,10 @@
+<div class="col-11 mx-auto ">
+<h2>日記の修正</h2>
+
+<%= render 'form', journal: @journal %>
+
+<p class="edit">
+<%= link_to '詳細画面へ', @journal %> |
+<%= link_to '一覧に戻る', journals_path %>
+</p>
+</div>
